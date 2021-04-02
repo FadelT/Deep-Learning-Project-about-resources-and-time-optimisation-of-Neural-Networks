@@ -5,9 +5,9 @@ As said in the title, this project focuses on optimisation of time and resources
 The database used was the Street View House Number(SVHN) data. The idea was to conceive a deep neural network (NN) that will perform well on this data and then build a k-nearest Neighbor that will use the different outputs of hidden layers of the NN as input and compare its performance to the NN's one. The hope was to obtain a good performance with KNN using only the first hidden layers of the NN.
 
 So, in the first time we built  several deep neural network models  and tested them on our data. After this step, we maintened only those who performed well (only two).
-we conceived then our simple K-NN model first. But the results were not too good. The best performance were only observed using the output of  the last hidden layer of NN. 
+we conceived then our simple K-NN model first (DKNN). But the results were not too good. The best performance were only observed using the output of  the last hidden layer of NN. 
 Then, we thought about another technics such us modifying the output of the hidden layers by modifying their structure (pooling, and softmax). It leaded then to two new models: 
--The first one was based on the modification of the pooling layers. Instead of using simple pooling, we used General pooling system and then extracted the new outputs. --The second one was based on the modification of sotfmax function of the NN. 
+-The first one (DKNN-Genral Pooling) was based on the modification of the pooling layers. Instead of using simple pooling, we used General pooling system and then extracted the new outputs. --The second one was based on the modification of sotfmax function of the NN: KPPV-Softmax
 The new results were quite satisfaying when compared to the first model but didn't outperform the NN on the first hidden layers. For some neighbors (k), the latest model outperform the NN on the last hidden layer. 
 
 Finally, we observed some trends related to the effect of hidden layers output on the KNN's performance, the effect of the performance of the NN on the KNN's one.
